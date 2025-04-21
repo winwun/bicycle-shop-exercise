@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "seed": "node scripts/seedDb.js",
-    "test": "jest"
+    "test": "jest",
+    "start": "node index.js",
+    "start:getTotalPrice": "LOCAL=1 node ./lib/getTotalPrice.js",
+    "start:getAvailableOptions": "LOCAL=1 node ./lib/getAvailableOptionsByDependency.js"
   },
   "keywords": [],
   "author": "",
