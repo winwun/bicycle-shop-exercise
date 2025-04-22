@@ -12,19 +12,23 @@ export function initializeMenu () {
     'Customize my own bike': customizeBike
   };
 
-  program.action(async () => {
-    const answer = await inquirer
-      .prompt([
-        {
-          type: 'list',
-          name: 'selectAction',
-          message: 'Choose a bike or customize your own',
-          choices: Object.keys(choices)
-        },
-      ]);
+  try {
+    program.action(async () => {
+      const answer = await inquirer
+        .prompt([
+          {
+            type: 'list',
+            name: 'selectAction',
+            message: 'Choose a bike or customize your own',
+            choices: Object.keys(choices)
+          },
+        ]);
 
-    await choices[answer.selectAction]();
-  });
+      await choices[answer.selectAction]();
+    });
+  } catch(error) {
+    console.error('Error occured while running console app:', error);
+  }
 
   program.parse(process.argv);
 }

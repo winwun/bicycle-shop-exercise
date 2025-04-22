@@ -67,6 +67,10 @@ async function seedDb() {
       { productPartId: 2, productId: 1, partId: 2, partOptionId: 4 },
       { productPartId: 3, productId: 1, partId: 3, partOptionId: 6 },
       { productPartId: 4, productId: 1, partId: 4, partOptionId: 9 },
+      { productPartId: 5, productId: 2, partId: 1, partOptionId: 2 },
+      { productPartId: 6, productId: 2, partId: 2, partOptionId: 5 },
+      { productPartId: 7, productId: 2, partId: 3, partOptionId: 7 },
+      { productPartId: 8, productId: 2, partId: 4, partOptionId: 10 },
 
     ];
 
